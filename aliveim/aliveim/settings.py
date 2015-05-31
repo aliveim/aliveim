@@ -52,12 +52,10 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'aliveim.urls'
 
-PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(PACKAGE_ROOT, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'aliveim.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
