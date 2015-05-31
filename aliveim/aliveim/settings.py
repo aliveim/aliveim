@@ -52,10 +52,13 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'aliveim.urls'
 
+PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PACKAGE_ROOT, 'templates')],
+        #'DIRS': [BASE_DIR+"/templates", ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
