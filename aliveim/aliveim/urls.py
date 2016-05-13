@@ -17,8 +17,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from landing import views as landing_views
+from registration.views import UserRegistrationView, UserRegistrationThanksView
 
 urlpatterns = [
     #url(r'^admin/', include(admin.site.urls)),
     url(r'^$', landing_views.index, name='index'),
+    url(r'^register/$', UserRegistrationView.as_view(), name='register'),
+    url(r'^thanks/$', UserRegistrationThanksView.as_view(), name='thanks'),
 ]
